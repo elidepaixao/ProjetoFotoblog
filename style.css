@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 10/16 = 62.5% */
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
