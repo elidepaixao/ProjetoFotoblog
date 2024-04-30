@@ -8,8 +8,23 @@
   font-size: 62.5%; /* 10/16 = 62.5% */
 }
 
+body {
+  font-size: 1.6rem;
+}
+
 #app {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   height: 100vh;
+}
+
+.container { /*criamos essa classe para separar o main  do header e footer*/
+  padding: 1.6rem 3.2rem;
+  width: min (112rem, 100%);
+  margin: 0 auto;
+}
+
+main {
+  overflow-y: scroll; /* serve para que o conteudo do main tenha a rolagem e 
+  o header e o footer fiquem "travados" quando da rolagem (scroll)*/
 }
