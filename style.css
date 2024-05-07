@@ -6,10 +6,18 @@
 
 :root {
   font-size: 62.5%; /* 10/16 = 62.5% */
+  --color-base-white: #ffffff; /*para criar variáveis, inicializa com -- e em seguida o nome que escolhemos
+  para aquela variável*/
+  --color-base-gray-100: #F5F5F5;
+  --color-base-gray-300: #8D8D99;
+  --color-base-gray-900: #202024;
+  
 }
 
 body {
   font-size: 1.6rem;
+  background-color: var(--color-base-white); /* pra usar as variáveis que criamos no root: var()*/
+  color: var(--color-base-gray-900);
 }
 
 #app {
@@ -20,11 +28,12 @@ body {
 
 .container { /*criamos essa classe para separar o main  do header e footer*/
   padding: 1.6rem 3.2rem;
-  width: min (112rem, 100%);
+  width: min(112rem, 100%);
   margin: 0 auto;
 }
 
 main {
   overflow-y: scroll; /* serve para que o conteudo do main tenha a rolagem e 
   o header e o footer fiquem "travados" quando da rolagem (scroll)*/
+  background-color: var(--color-base-gray-100);
 }
