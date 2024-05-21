@@ -11,6 +11,13 @@
   --color-base-gray-100: #F5F5F5;
   --color-base-gray-300: #8D8D99;
   --color-base-gray-900: #202024;
+
+  /*font-family: "Mulish", sans-serif; migramos para os seletores abaixo pois não estava aplicando devidamente*/
+  
+}
+
+html, body, input {
+  font-family: "Mulish", sans-serif;
   
 }
 
@@ -36,4 +43,77 @@ main {
   overflow-y: scroll; /* serve para que o conteudo do main tenha a rolagem e 
   o header e o footer fiquem "travados" quando da rolagem (scroll)*/
   background-color: var(--color-base-gray-100);
+}
+
+header,
+nav,
+nav, ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+  font-weight: 700;
+}
+
+header form {
+  flex: 1; /*preenche todo o espaço disponível para ele*/
+}
+
+nav ul {
+  list-style: none; /*retira os pontinhos do ul*/
+  font-size: 1.8;
+  color: var(--color-base-gray-300);
+}
+
+ul li.active {
+  color: var(--color-base-gray-900);
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolut;
+}
+
+.input-wrapper input {
+  width: 100%;
+  border: 0;
+  padding: 1.2rem 1.6rem;
+  background-color: var(--color-base-gray-100);
+  opacity: 0.56;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover; /*dimensiona a imagem para cobrir todo o espaço disponível, mantendo a proporção original*/
+  border-radius: 50%;
+}
+
+/*Galeria*/
+
+main h1 {
+  padding: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+
+}
+
+.item img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+  color: var(--color-base-gray-900);
 }
