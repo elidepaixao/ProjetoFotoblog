@@ -107,11 +107,41 @@ main h1 {
 
 }
 
+.item{
+  background-color: var(--color-base-white);
+  border-radius: 0.8rem;
+  /*a imagem transbordou a caixa por isso o border-radius
+   aplicou apenas na parte inferior da imagem, para corrigir, usaremos
+   o overflow: hidden;*/
+   overflow: hidden;
+}
+
 .item img {
   width: 100%;
   aspect-ratio: 16/9; /*proporção das imagens*/
   object-fit: cover; /*para evitar que algulmas imagens fiquem "esticadas"*/
 }
+
+.details {
+  padding: 2.2rem;
+}
+
+.details h2 {
+  font-size: 1rem;
+}
+
+.tags {
+margin--top: 1.2rem;
+}
+.tags span{
+  padding: 0.6rem;
+  background-color: var(--color-base-gray-100);
+  border-radius:0.4rem;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
 
 footer {
   text-align: center;
