@@ -120,6 +120,7 @@ main h1 {
   width: 100%;
   aspect-ratio: 16/9; /*proporção das imagens*/
   object-fit: cover; /*para evitar que algulmas imagens fiquem "esticadas"*/
+  border-radius: 0.8rem;/*para a borda inferior da imagem tbm ficar arredondda*/
 }
 
 .details {
