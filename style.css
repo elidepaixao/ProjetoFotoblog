@@ -83,6 +83,7 @@ ul li.active {
   opacity: 0.56;
   border-radius: 0.5rem;
   font-weight: 600;
+  margin-top:1.6rem;
 }
 
 .avatar {
@@ -121,6 +122,22 @@ main h1 {
   aspect-ratio: 16/9; /*proporção das imagens*/
   object-fit: cover; /*para evitar que algulmas imagens fiquem "esticadas"*/
   border-radius: 0.8rem;/*para a borda inferior da imagem tbm ficar arredondda*/
+  transition: all 200ms ease-out; 
+}
+
+ /* CSS TRANSITION
+> transition-property => propriedade - definimos para qual propriedade desejamos aplicar
+a transição/deve ser colocada antes do :hover e a propri;
+> transition-duration => duração da transição;
+> transition-delay=> tempo que leva para começar a transição;
+>transition-time-function=> suavidade da transição: easy-in, easy-out e etc;
+> transition-property: all => para todas as propreidades do :hover ou
+separamos as propriedades por vírgula, ex.: transition-property: filter, transform;
+*/
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
 }
 
 .details {
@@ -139,7 +156,7 @@ margin--top: 1.2rem;
   background-color: var(--color-base-gray-100);
   border-radius:0.4rem;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
