@@ -136,7 +136,7 @@ separamos as propriedades por vírgula, ex.: transition-property: filter, transf
 */
 
 .item img:hover {
-  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  filter: hue-rotate(1deg) contrast(101%) saturate(150%);
   transform: scale(1.1) rotate(-2deg);
 }
 
@@ -166,4 +166,53 @@ footer {
   padding: 1.6rem;
   font-weight: 600;
   color: var(--color-base-gray-900);
+}
+
+/*CSS ANIMATION
+site: animista.net
+*/
+
+/*fazer com que o header e o footer animem de formas inversas: o header de cima pra baixo
+e o footer de baixo para cima.
+Para isso criamos uma variável --startY
+*/
+
+header {
+  --startY: -100%;
+  animation: move .2s;
+
+}
+
+footer {
+  --startY: 100%;
+  animation: move .2s;
+
+
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(var(--startY));
+  }
+  
+}
+
+.item {
+  --delay: 0.4s;
+  animation: appear .4s var(--delay) backwards; /*bckwards transfere as propriedade do @keyframes
+  para esse item (.item)
+  Para a animação acontecer item por item após o tempo desejado, criamos uma variável delay que em seguida
+  adicionamos em cada "class item" no html*/
+
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+
+    transform: scale(1.2);
+  }
 }
